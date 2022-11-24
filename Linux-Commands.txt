@@ -1,0 +1,137 @@
+ssh -> It is used to connect to a linux machine. (Ex: ssh -i keypair.pem username@server_ip)
+
+ls -> list all the files in current working directory 
+
+ls -l -> to list the files in current working directory in nice long list.
+
+ls -al -> to see the hidden files in current working directory
+
+pwd -> to find out where are you, present working directory
+
+cd <path> -> change directory, to change your working directory after cd give absolute path or relative path 
+
+cd .. -> jump back one directory
+
+cd -> type just cd to come to your home directory from anywhere
+ 
+touch <file_name> -> to create an empty file
+
+touch file{1..5} -> to create 5 empty files 
+
+touch -d 12/02/2022 file_name -> to create an empty file on a specific date. You can choose future dates also. (ex. file created on 2nd dec 2022)
+
+echo "some stuff" -> it will display some stuff on cli
+
+echo "some stuff" > file.txt  -> it will create a file.txt and save some stuff into it. 
+
+echo "some other stuffs" >> file.txt  -> it will add some other stuffs to the existing content of file.txt. >> is used to prevent overwriting the file
+
+vim file_name -> to edit a file using vim editor. ( press i to get in insert mode to write anything,  :wq to save and quit,  :q! to come out without saving )
+
+cat file_name -> to display the content of a file on cli so that you can read it.
+
+mkdir dir_name -> to create a directory
+
+cp file_name /new_location -> copy a file from one place to another
+
+mv file_name /new_location -> move a file to new location
+
+rm file_name -> to remove/delete a file
+
+rmdir dir_name -> to remove an empty directory 
+
+rm -r dir_name -> to remove a non empty directory
+
+clear -> type clear to clean you terminal
+
+whoami -> in case you forget who you are
+
+sudo useradd john -> to add a new user john, then give sudo password
+
+id john -> to know user john group, id etc
+
+sudo passwd john -> to set password for new user john
+
+su john -> to switch as a new user john, then provide password which you set earlier
+
+exit -> to logout as user john and become yourself 
+
+sudo apt update -> to update your debian(ex ubuntu) based machine
+
+sudo yum update -> to update rpm based machine ( ex red hat , cenos)
+
+man <command> -> to know details about the command
+
+whatis <command> -> to know in brief what the command does
+
+curl https://bhagvadgitainenglish.files.wordpress.com/2008/12/srimad_bhagavad_gita2.pdf -o Gita_English.pdf   --> It will download and save as Gita_English.pdf
+
+wget https://bhagvadgitainenglish.files.wordpress.com/2008/12/srimad_bhagavad_gita2.pdf  -->  It will download the pdf srimad_bhagavad_gita2.pdf
+
+zip folder2.zip folder2 --> to zip folder2 
+
+unzip folder2.zip --> to unzip folder2
+
+less bigfile.txt --> to read a bigfile one page at a time, press spacebar to move to next page, q to come out of it.
+
+head bigfile.txt --> to show first 10 lines of bigfile on cli 
+
+head -n 20 bigfile.txt  --> it will show first 20 lines of bigfile
+
+less bigfile.txt --> it will show last 10 lines of bigfile
+
+diff file10.txt file11.txt  -> It shows the difference two files
+
+cat file12.txt | sort --> It will sort the content of file12 in alphabetical order
+
+find / -name "file_name" --> to find the location of a file
+
+sudo find . -type f -name ".*"  --> to find all hidden files in current directory
+
+find . -type f -empty  --> to find empty directories
+
+find . -perm /a=x  --> find all executable files
+
+chmod +x file_name  --> to make file executable
+
+chown john file1 --> it will make user john the owner of file1
+
+ifconfig --> it will show all interfaces and ip
+
+ip address --> it will also show all interfaces and ip
+
+ip address | grep enp0s8  --> to see details of enp0s8 interface 
+
+ip address | grep enp0s8 | grep inet | awk '{print $2}'  --> To display just ip of interface enp0s8
+
+resolvectl status --> show dns server details
+
+ping -c 5 google.com --> ping goole.com 5 times. Nice way to check your internet connectivity. 
+
+traceroute google.com --> tells no. of hops taken and latency for goole.com
+
+netstat --> what ports open on your linux machine. 
+
+netstat -tulpn --> to check the list of listening TCP and UDP ports
+
+neofetch --> details about your linux machine
+
+cal --> show current month calander 
+
+free --> memory used and available
+
+df -H --> disc space used and available
+
+ps -ef --> show all process details 
+
+kill -9 pid --> to kill a process forcefully 
+
+systemctl start apache2 --> to start a service apache2 
+
+systemctl status apache2 --> to check status of a service
+
+history --> to see all commands used earlier
+
+
+
+
