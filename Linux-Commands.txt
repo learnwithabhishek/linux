@@ -92,6 +92,16 @@ find . -type f -empty  --> to find empty directories
 
 find . -perm /a=x  --> find all executable files
 
+tar -cvf file_backup.tar file1.txt file2.txt file3.txt --> create backup of all 3 files
+
+tar -xvf file_backup.tar --> To extract the 3 files from tarball
+
+grep -i Home file2.txt --> to find word home in file2 ignoring case. It will return whole line which contains home from file2 on cli.
+
+sed 's/apple/banana/g' fruits.txt --> replaces all occurrences of the word “apple” with the word “banana” and prints the resulting text to the terminal.
+
+sed -i 's/apple/banana/g' fruits.txt --> It will replace the word and save changes in file fruits.txt
+
 chmod +x file_name  --> to make file executable
 
 chown john file1 --> it will make user john the owner of file1
@@ -122,6 +132,8 @@ free --> memory used and available
 
 df -H --> disc space used and available
 
+df -H | awk '{print$2"   "$3} NR==4{exit}' --> It will show first 4 rows of 2nd and 3rd column.
+
 ps -ef --> show all process details 
 
 kill -9 pid --> to kill a process forcefully 
@@ -131,7 +143,3 @@ systemctl start apache2 --> to start a service apache2
 systemctl status apache2 --> to check status of a service
 
 history --> to see all commands used earlier
-
-
-
-
